@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Activity, CalendarDays, ClipboardList, Users, UserRound, Stethoscope,
   Wallet, FileText, ChartNoAxesColumn, Settings, Clock3, ArrowUpRight
@@ -21,8 +22,22 @@ export default function Home() {
     <main className="shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-mark"><Activity size={23} /></div>
-          <div><strong>FB Clínica</strong><span>Fabiana Bruinsma</span></div>
+          <Image
+            src="/logo-fb.png"
+            alt="Fabiana Bruinsma — Pilates & Fisioterapia"
+            width={494}
+            height={277}
+            priority
+            className="brand-full"
+          />
+          <Image
+            src="/icon.png"
+            alt="FB"
+            width={48}
+            height={48}
+            priority
+            className="brand-compact"
+          />
         </div>
 
         <div className="side-label">MENU PRINCIPAL</div>
