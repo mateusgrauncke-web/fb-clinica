@@ -1,3 +1,4 @@
+import SairButton from "@/app/components/SairButton";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -64,9 +65,7 @@ export default function Home() {
           </Link>
         </nav>
 
-        <div className="sidebar-bottom">
-          <Settings size={18} /> Configurações
-        </div>
+        <div className="sidebar-bottom"><SairButton /></div>
       </aside>
 
       <section className="content">

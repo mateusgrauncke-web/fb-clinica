@@ -1,4 +1,5 @@
 "use client";
+import SairButton from "@/app/components/SairButton";
 
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import Link from "next/link";
@@ -138,7 +139,7 @@ export default function PacientesPage() {
           <Link className="nav-item" href="/agenda"><CalendarDays size={18} /> Agenda</Link>
           <Link className="nav-item" href="/financeiro"><Wallet size={18} /> Financeiro</Link>
         </nav>
-        <div className="sidebar-bottom"><Settings size={18} /> Configurações</div>
+        <div className="sidebar-bottom"><SairButton /></div>
       </aside>
 
       <section className="content patients-content">
