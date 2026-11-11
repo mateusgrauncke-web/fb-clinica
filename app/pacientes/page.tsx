@@ -28,7 +28,7 @@ type Patient = {
   ativo: boolean;
 };
 
-type PatientForm = Omit<Patient, "id">;
+type PatientForm = { [K in keyof Omit<Patient, "id">]: NonNullable<Omit<Patient, "id">[K]> };
 const emptyForm: PatientForm = {
   nome: "", data_nascimento: "", cpf: "", telefone: "", whatsapp: "", email: "",
   sexo: "", endereco: "", cidade: "", estado: "", contato_emergencia: "",
