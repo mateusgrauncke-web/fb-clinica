@@ -9,7 +9,13 @@ export async function createClient() {
   return createServerClient(url, key, {
     cookies: {
       getAll() { return cookieStore.getAll(); },
-      setAll(items) {
+      setAll(
+  items: {
+    name: string;
+    value: string;
+    options?: Parameters<typeof cookieStore.set>[2];
+  }[]
+) {
         try { items.forEach(({ name, value, options }) => cookieStore.set(name, value, options)); }
         catch { /* Server Components não podem modificar cookies; middleware renova a sessão. */ }
       },
